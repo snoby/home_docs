@@ -6,7 +6,15 @@ site_url: 'https://info.mattsnoby.com'
 nav:
   - Home: index.md
   - About: about.md
+  - Services: services.md
+  - Mellanox: mellanox.md
+  - Dell: r720.md
 
+markdown_extensions:
+  - meta
+  - toc:
+     permalink: True
+  - attr_list
 
 # Configuration
 theme:
