@@ -1,0 +1,20 @@
+# Project information
+site_name: 'Snoby home network'
+site_description: 'Information about the home lab and home network'
+site_author: 'Matt Snoby'
+site_url: 'https://info.mattsnoby.com'
+nav:
+  - Home: index.md
+  - About: about.md
+
+
+# Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: 'indigo'
+    accent: 'indigo'
+  font:
+    text: 'Roboto'
+    code: 'Roboto Mono'
