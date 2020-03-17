@@ -19,7 +19,8 @@ build:
 
 .PHONY: docs
 docs:
-	docker run --rm  -it -v $(PWD)/docs:/docs  $(IMAGE) build
+	-rm -rf $(PWD)/docs/site
+	docker run --rm --user 1000:1000  -it -v $(PWD)/docs:/docs  $(IMAGE) build
 
 .PHONY: clean
 clean:
