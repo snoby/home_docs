@@ -1,20 +1,25 @@
 
 
 ## Services
-* [Torrent Server](http://10.0.0.131:9091){target=\_blank}
+* [Transmission](http://10.0.0.131:9091){target=\_blank}
 * [Jackett](http://10.0.0.131:9117){target=\_blank}
 * [Sonarr](http://10.0.0.131:8989){target=\_blank}
+* [Radarr](http://10.0.0.131:7878){target=\_blank}
 * [Speed Test](http://10.0.0.131:12080){target=\_blank}
 * [plex ](http://10.0.0.131:32400){target=\_blank}
 
 
 ## Hardware
 * [Ipfire Router](https://10.0.0.1:444){target=\_blank}
+* [Zyxel Swich](https://10.0.0.2){target=\_blank}
 * [Cisco Fiber Swich](https://10.0.0.3){target=\_blank}
+* [Brocade ICX 6450 Swich](https://10.0.0.4){target=\_blank}
+* [Nighthawk Access point ](https://10.0.0.12){target=\_blank}
 
 ### Servers iDrac
 
 * [r710 idrac](https://10.0.0.9){target=\_blank}
+* [r510 idrac](https://10.0.0.20){target=\_blank}
 
 
 # Static IP Addresses
