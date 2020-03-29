@@ -8,6 +8,9 @@
 * [Speed Test](http://10.0.0.131:12080){target=\_blank}
 * [plex ](http://10.0.0.131:32400){target=\_blank}
 
+### Plex Tuners
+* [HD Antenna Tuners](http://my.hdhomerun.com/#tab-2){target=\_blank}
+
 
 ## Hardware
 * [Ipfire Router](https://10.0.0.1:444){target=\_blank}
