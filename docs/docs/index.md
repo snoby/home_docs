@@ -17,6 +17,7 @@
 * [Zyxel Swich](https://10.0.0.2){target=\_blank}
 * [Cisco Fiber Swich](https://10.0.0.3){target=\_blank}
 * [Brocade ICX 6450 Swich](https://10.0.0.4){target=\_blank}
+* [Garage Access Point](https://10.0.0.11){target=\_blank}
 * [Nighthawk Access point ](https://10.0.0.12){target=\_blank}
 
 ### Servers iDrac
@@ -36,6 +37,7 @@
 | AC1200 Upstairs   | 10.0.0.5     | playroom access point       |
 |                   |              |                             |
 | r710 iDrac        | 10.0.0.9     | idrac for r710              |
+| Linksys EA6500    | 10.0.0.11    | Garage Access Point         |
 | Netgear nighthawk | 10.0.0.12    | Masterbed room access point |
 |                   |              |                             |
 | r510 iDrac        | 10.0.0.20    | idrac for r510              |
