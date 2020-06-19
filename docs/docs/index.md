@@ -1,14 +1,14 @@
 
 
 ## Services
-* [Transmission](http://10.0.0.131:9091){target=\_blank}
-* [Jackett](http://10.0.0.131:9117){target=\_blank}
-* [Sonarr](http://10.0.0.131:8989){target=\_blank}
-* [Radarr](http://10.0.0.131:7878){target=\_blank}
-* [Speed Test](http://10.0.0.131:12080){target=\_blank}
-* [plex ](http://10.0.0.131:32400){target=\_blank}
-* [tautulli for plex ](http://tautulli.mattsnoby.com){target=\_blank}
+* [Transmission](http://dockerhost:9091){target=\_blank}
+* [Jackett](http://dockerhost:9117){target=\_blank}
+* [Sonarr](http://dockerhost:8989){target=\_blank}
+* [Radarr](http://dockerhost:7878){target=\_blank}
+* [Speed Test](http://dockerhost:12080){target=\_blank}
+* [plex ](http://plexbox:32400){target=\_blank}
 * [cockpit for storage](https://storage:9090){target=\_blank}
+* [proxmox](https://proxmox:8006){target=\_blank}
 
 ### Plex Tuners
 * [HD Antenna Tuners](http://my.hdhomerun.com/#tab-2){target=\_blank}
