@@ -23,7 +23,7 @@
 - [Mikrotek Switch](https://10.0.0.6){target=\_blank}
 - [Garage Access Point](https://10.0.0.11){target=\_blank}
 - [Nighthawk Access point ](https://10.0.0.12){target=\_blank}
-- [Comfast Garage Access Point ](https://10.0.0.13){target=\_blank}
+- [Comfast Garage Access Point ](http://10.0.0.13){target=\_blank}
 
 ### Servers iDrac
 
