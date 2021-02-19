@@ -6,7 +6,6 @@ site_url: 'https://info.mattsnoby.com'
 nav:
   - Home: index.md
   - About: about.md
-  - Services: services.md
   - Mellanox: mellanox.md
   - Dell: r720.md
 
@@ -26,3 +25,8 @@ theme:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
+  features:
+  - navigation.instant
+  - navigation.expand
+  - navigation.sections
+  - toc.integration

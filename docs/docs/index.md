@@ -9,6 +9,10 @@
 - [cockpit for storage](https://storage:9090){target=\_blank}
 - [proxmox](https://proxmox:8006){target=\_blank}
 
+## Virtual Services
+
+- [prometheus](http://dockerhost:9090){target=\_blank}
+
 ### Plex Tuners
 
 - [HD Antenna Tuners](http://my.hdhomerun.com/#tab-2){target=\_blank}
