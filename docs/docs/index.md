@@ -11,7 +11,8 @@
 
 ## Virtual Services
 
-- [prometheus](http://dockerhost:9090){target=\_blank}
+- [prometheus](http://prom.mattsnoby.com){target=\_blank}
+- [grafana](http://grafana.mattsnoby.com){target=\_blank}
 
 ### Plex Tuners
 
