@@ -1,0 +1,48 @@
+site_name: Snoby Home Document Service
+site_description: "Information about the home lab and home network"
+site_author: "Matt Snoby"
+site_url: "http://docs.mattsnoby.com"
+theme:
+  name: material
+  language: "en"
+  palette:
+    primary: "indigo"
+    accent: "indigo"
+  font:
+    text: "Roboto"
+    code: "Roboto Mono"
+  icon:
+    repo: fontawesome/brands/github
+  features:
+    - navigation.instant
+    - navigation.expand
+    - navigation.sections
+    - toc.integration
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:mermaid2.fence_mermaid
+  - pymdownx.snippets
+
+plugins:
+  - search
+  - img2fig
+  - mermaid2:
+      version: 8.6.4
+      arguments:
+        securityLevel: "loose"
+
+extra_javascript:
+  - https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js
+
+repo_url: https://github.com/snoby/home_docs/
+repo_name: github.com/snoby/home_docs
+edit_uri: blob/master/home_docs/
