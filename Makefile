@@ -17,6 +17,11 @@ build:
 	@echo ::: BUILD :::
 
 
+.PHONY: serve
+serve:
+	-rm -rf $(PWD)/docs/site
+	docker run --rm --user 1000:1000  -it -p 8000:8000 -v $(PWD)/docs:/docs  $(IMAGE) serve
+
 .PHONY: docs
 docs:
 	-rm -rf $(PWD)/docs/site
