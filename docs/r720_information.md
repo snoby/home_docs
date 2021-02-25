@@ -1,0 +1,9 @@
+
+# IDrac
+
+
+
+# H200 flashing to IT mode
+
+[Instructions to Cross Flash](https://www.ixsystems.com/community/resources/detailed-newcomers-guide-to-crossflashing-lsi-9211-9300-9305-9311-hba-and-variants.54/)
+
