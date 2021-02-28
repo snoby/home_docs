@@ -1,4 +1,4 @@
-#Mellanox updating and configs
+# Mellanox updating and configs
 
 The three Qsfp cards that I have are the :
 MCX354-FCBT with a PSID of MT_1090120019.  Last version update took them to firmware version 2.42.5000
@@ -17,5 +17,17 @@ some helpful scripts that use mstflint are here
 files/network/mellanox$ ls
 set_srvio_mellonox.sh* status_mellonox.sh*    update_mellonox.sh*
 
+```bash
+#!/bin/bash
+set -xe
+DEVICE_ID=$(lspci | awk '/Mellanox/{print $1}')
+echo "$DEVICE_ID"
 
-##Performance tuning suggtestions for Mellanox
+sudo mstconfig -d $DEVICE_ID query
+
+sudo mstconfig  -d $DEVICE_ID set SRIOV_EN=1 NUM_OF_VFS=8
+sudo mst start
+sudo mlxconfig -d /dev/mst/mt4099_pciconf0 set LINK_TYPE_P1=2 LINK_TYPE_P2=2
+```
+
+## Performance tuning suggtestions for Mellanox

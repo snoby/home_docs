@@ -1,3 +1,5 @@
+
+
 ## Services
 
 - [Transmission](http://dockerhost:9091){target=\_blank}
@@ -14,12 +16,10 @@
 - [prometheus](http://prom.mattsnoby.com){target=\_blank}
 - [grafana](http://grafana.mattsnoby.com){target=\_blank}
 
-### Plex Tuners
-
-- [HD Antenna Tuners](http://my.hdhomerun.com/#tab-2){target=\_blank}
 
 ## Hardware
 
+- [HD Antenna Tuners](http://my.hdhomerun.com/#tab-2){target=\_blank}
 - [Ipfire Router](https://10.0.0.1:444){target=\_blank}
 - [Zyxel Swich](https://10.0.0.2){target=\_blank}
 - [Cisco Fiber Swich](https://10.0.0.3){target=\_blank}
@@ -35,7 +35,7 @@
 - [r710 idrac](https://10.0.0.9){target=\_blank}
 - [r510 idrac](https://10.0.0.20){target=\_blank}
 
-# Static IP Addresses
+## Static IP Addresses
 
 | machine                  | ip: port     | service                     |
 | ------------------------ | ------------ | --------------------------- |
