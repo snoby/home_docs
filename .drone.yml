@@ -1,0 +1,27 @@
+---
+kind: pipeline
+type: docker
+name: default
+
+platform:
+  os: linux
+  arch: amd64
+
+steps:
+  - name: build_site
+    image: iotapi322/docs:latest
+    commands:
+      - mkdocs build
+      - echo "$SSH_KEY"
+
+  - name: deploy_site
+    image: appleboy/drone-scp
+    settings:
+      host: dockerhost
+      user: snoby
+      port: 22
+      key:
+        from_secret: SSH_KEY
+      target: /mnt/data/docs/
+      source: /drone/src/site
+      rm: true
