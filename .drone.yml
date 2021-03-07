@@ -12,7 +12,8 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-      - echo "${SSH_KEY}"
+    when:
+      event: [push, pull_request]
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -25,3 +26,5 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
+    when:
+      branch: master
