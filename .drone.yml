@@ -14,6 +14,9 @@ steps:
       - mkdocs build
     when:
       event: [push, pull_request]
+      branch:
+        exclude:
+          - master
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -27,4 +30,5 @@ steps:
       source: site
       rm: true
     when:
+      event: [push]
       branch: master
