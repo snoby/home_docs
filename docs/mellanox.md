@@ -14,8 +14,10 @@ some helpful scripts that use mstflint are here
 [set_srvio_mellonox.sh](files/network/mellanox/set_srvio_mellonox.sh)
 [status_mellonox.sh](files/network/mellanox/status_mellonox.sh)
 
+```
 files/network/mellanox$ ls
 set_srvio_mellonox.sh* status_mellonox.sh*    update_mellonox.sh*
+```
 
 ```bash
 #!/bin/bash
