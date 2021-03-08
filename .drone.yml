@@ -13,7 +13,8 @@ steps:
     commands:
       - mkdocs build
     when:
-      event: [push, pull_request]
+      event:
+        - push
       branch:
         exclude:
           - master
@@ -30,5 +31,7 @@ steps:
       source: site
       rm: true
     when:
-      event: push
-      branch: master
+      event:
+        - push
+      branch:
+        - master
