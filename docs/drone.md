@@ -98,6 +98,6 @@ steps:
       source: site
       rm: true
     when:
-      event: [push]
+      event: push
       branch: master
 ```
