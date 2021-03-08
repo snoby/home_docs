@@ -62,14 +62,19 @@ WantedBy=multi-user.target
 Notice, I'm not exposing anything to the host, everything has to go through the front end proxy.  However other containers on the same docker network can get to port 80 and 443
 
 ## Drone configs tweaks
-To setup a config that only builds on the pull request pushes, but only builds on the master on the merge to master setup the rules like this:
+To setup a config that only builds on the  pushes of commits and then  does a full build and deploy to master on the merge to master,  setup the rules to look like this:
 
+ Notice the GLOBAL trigger setup on line 75
 
 ```yaml
---
+---
 kind: pipeline
 type: docker
 name: default
+
+trigger:
+  event:
+    - push
 
 platform:
   os: linux
@@ -80,11 +85,6 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-    when:
-      event: [push, pull_request]
-      branch:
-        exclude:
-          - master
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -97,6 +97,6 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-    trigger:
-        branch: master
+    when:
+      branch: master
 ```
