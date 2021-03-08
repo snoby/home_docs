@@ -12,7 +12,7 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-    when:
+    trigger:
       event:
         - push
       branch:
@@ -30,7 +30,7 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-    when:
+    trigger:
       event:
         - push
       branch:
