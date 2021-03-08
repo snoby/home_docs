@@ -12,12 +12,13 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-    trigger:
-      event:
-        - push
-      branch:
-        exclude:
-          - master
+
+  trigger:
+    event:
+      - push
+    branch:
+      exclude:
+        - master
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -30,8 +31,9 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-    trigger:
-      event:
-        - push
-      branch:
-        - master
+
+  trigger:
+    event:
+      - push
+    branch:
+      - master
