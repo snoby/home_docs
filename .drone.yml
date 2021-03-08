@@ -30,3 +30,16 @@ steps:
       rm: true
     when:
       branch: master
+
+  - name: "restart nginx"
+    image: appleboy/drone-ssh
+    settings:
+      host: dockerhost
+      user: snoby
+      port: 22
+      key:
+        from_secret: SSH_KEY
+      script:
+        - /home/snoby/docker_start_up_commands/docs/run_docs.sh
+    when:
+      branch: master
