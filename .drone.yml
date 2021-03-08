@@ -16,10 +16,6 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-    when:
-      branch:
-        exclude:
-          - master
 
   - name: deploy_site
     image: appleboy/drone-scp
