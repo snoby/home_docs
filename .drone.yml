@@ -29,6 +29,6 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-    trigger:
-      branch: master
+    when:
       event: push
+      branch: master
