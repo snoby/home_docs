@@ -99,5 +99,6 @@ steps:
       rm: true
     when:
       event: push
+        exclude: pull_request
       branch: master
 ```
