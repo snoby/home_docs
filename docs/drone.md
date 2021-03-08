@@ -97,8 +97,6 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-    when:
-      event: push
-        exclude: pull_request
-      branch: master
+    trigger:
+        branch: master
 ```
