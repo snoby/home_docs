@@ -3,6 +3,10 @@ kind: pipeline
 type: docker
 name: default
 
+trigger:
+  event:
+    - push
+
 platform:
   os: linux
   arch: amd64
@@ -12,13 +16,10 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
-
-  trigger:
-    event:
-      - push
-    branch:
-      exclude:
-        - master
+    when:
+      branch:
+        exclude:
+          - master
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -31,9 +32,5 @@ steps:
       target: /mnt/data/docs/
       source: site
       rm: true
-
-  trigger:
-    event:
-      - push
-    branch:
-      - master
+    when:
+      branch: master
