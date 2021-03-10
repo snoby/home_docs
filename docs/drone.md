@@ -100,3 +100,7 @@ steps:
     when:
       branch: master
 ```
+
+## Vault integration
+
+Run a second container tied to the drone-agent to allow the agent to get secrets from vault.  Currently I'm not running vault locally, I'm running  on the free beta of vault from Hashicorp
