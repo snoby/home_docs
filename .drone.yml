@@ -11,9 +11,6 @@ platform:
   os: linux
   arch: amd64
 
-
-
-
 steps:
   - name: build_site
     image: iotapi322/docs:latest
@@ -49,17 +46,16 @@ steps:
     when:
       branch: master
 
-
 ---
 kind: secret
 name: SSH_VAULT_KEY
-  get:
-    path: secret/data/CI/Global
-    name: SSH_KEY
+get:
+  path: secret/data/CI/Global
+  name: SSH_KEY
 
 ---
 kind: secret
 name: second_secret
-  get:
-    path: secret/data/CI/Global
-    name: Secret
+get:
+  path: secret/data/CI/Global
+  name: Secret
