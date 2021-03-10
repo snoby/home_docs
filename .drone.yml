@@ -11,11 +11,16 @@ platform:
   os: linux
   arch: amd64
 
+
+
+
 steps:
   - name: build_site
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
+      - echo "$SSH_VAULT_KEY"
+      - echo "$second_secret"
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -24,7 +29,7 @@ steps:
       user: snoby
       port: 22
       key:
-        from_secret: SSH_KEY
+        from_secret: SSH_VAULT_KEY
       target: /mnt/data/docs/
       source: site
       rm: true
@@ -38,8 +43,23 @@ steps:
       user: snoby
       port: 22
       key:
-        from_secret: SSH_KEY
+        from_secret: SSH_VAULT_KEY
       script:
         - /home/snoby/docker_start_up_commands/docs/run_docs.sh
     when:
       branch: master
+
+
+---
+kind: secret
+name: SSH_VAULT_KEY
+  get:
+    path: secret/data/CI/Global
+    name: SSH_KEY
+
+---
+kind: secret
+name: second_secret
+  get:
+    path: secret/data/CI/Global
+    name: Secret
