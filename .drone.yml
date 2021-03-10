@@ -16,6 +16,7 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
+      - echo "Hello build"
 
   - name: deploy_site
     image: appleboy/drone-scp
