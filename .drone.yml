@@ -1,12 +1,11 @@
 ---
 kind: pipeline
 type: docker
-name: default
+name: home_docs build and deploy
 
-trigger:
-  event:
-    - push
-
+  #trigger:
+  #  event: [push, pull_request]
+  #
 platform:
   os: linux
   arch: amd64
@@ -16,6 +15,7 @@ steps:
     image: iotapi322/docs:latest
     commands:
       - mkdocs build
+      - echo "Hello build"
 
   - name: deploy_site
     image: appleboy/drone-scp
