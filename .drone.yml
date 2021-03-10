@@ -4,8 +4,7 @@ type: docker
 name: default
 
 trigger:
-  event:
-    - push
+  event: [push, pull_request]
 
 platform:
   os: linux
