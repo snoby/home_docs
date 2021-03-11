@@ -1,5 +1,45 @@
-# Home Drone CI 
-The Drone server  is running in a docker container only setup with http, however the reverse proxy is doing it's https termination.  A known good env configuration looks like:
+# Home Drone CI
+
+The Drone server  is running in a docker container only setup with http, however the reverse proxy is doing it's https termination.
+
+## Gotcha's with reverse proxy SSL termination.
+The reverse proxy SSL termination presents a couple of little issues in the configuation.  Normally the http port is set to 301 return a redirect.  Which the agent can't handle.
+
+Therefore when setting up behind a reverse proxy that will be terminating the SSL you have to do the following
+
+for the server
+```bash
+DRONE_SERVER_PROTO=http
+LETSENCRYPT_HOST=drone.mattsnoby.com
+LETSENCRYPT_EMAIL=matt.snoby@icloud.com
+VIRTUAL_HOST=drone.mattsnoby.com
+VIRTUAL_PORT=80
+VIRTUAL_PROTOCOL=http
+HTTPS_METHOD=noredirect
+```
+
+for the agent
+```
+DRONE_RPC_PROTO=https
+
+```
+
+for the github config for the webhook
+Set the hook up for `https` because the nginx container will do the termination.
+
+A _note_ : you can leave the `DRONE_RPC_PROTO=http` if you set the reverse proxy to NOT do a redirect on the http port. For the nginx container set env variable `HTTPS_METHOD=noredirect`
+
+
+
+
+
+
+
+
+
+
+
+A known good env configuration looks like:
 
 ```bash
 DRONE_SERVER_HOST=drone.mattsnoby.com
@@ -104,3 +144,4 @@ steps:
 ## Vault integration
 
 Run a second container tied to the drone-agent to allow the agent to get secrets from vault.  Currently I'm not running vault locally, I'm running  on the free beta of vault from Hashicorp
+
