@@ -19,7 +19,7 @@ steps:
       SECRET_2:
         from_secret: number
     commands:
-      - mkdocs build
+      #- mkdocs build
       - echo "Hello build"
       - echo " Secret color is $SECRET_1 "
       - echo " Secret number is $SECRET_2 "
