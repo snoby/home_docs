@@ -21,8 +21,8 @@ steps:
     commands:
       - mkdocs build
       - echo "Hello build"
-      - echo " Secret color is ${SECRET_1}"
-      - echo " Secret number is ${SECRET_2}"
+      - echo " Secret color is $SECRET_1 "
+      - echo " Secret number is $SECRET_2 "
 
   - name: deploy_site
     image: appleboy/drone-scp
