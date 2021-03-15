@@ -3,9 +3,9 @@ kind: pipeline
 type: docker
 name: home_docs build and deploy
 
-  #trigger:
-  #  event: [push, pull_request]
-  #
+trigger:
+  event: [push, pull_request]
+
 platform:
   os: linux
   arch: amd64
@@ -13,9 +13,13 @@ platform:
 steps:
   - name: build_site
     image: iotapi322/docs:latest
+    environment:
+      SECRET_1:
+        from_secret: color
+      SECRET_2:
+        from_secret: number
     commands:
       - mkdocs build
-      - echo "Hello build"
 
   - name: deploy_site
     image: appleboy/drone-scp
@@ -43,3 +47,4 @@ steps:
         - /home/snoby/docker_start_up_commands/docs/run_docs.sh
     when:
       branch: master
+
