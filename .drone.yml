@@ -19,48 +19,32 @@ steps:
       SECRET_2:
         from_secret: number
     commands:
-      #- mkdocs build
-      - echo "Hello build - please work"
-      - echo " Secret color is $SECRET_1 "
-      - echo " Secret number is $SECRET_2 "
+      - mkdocs build
 
-#  - name: deploy_site
-#    image: appleboy/drone-scp
-#    settings:
-#      host: dockerhost
-#      user: snoby
-#      port: 22
-#      key:
-#        from_secret: SSH_KEY
-#      target: /mnt/data/docs/
-#      source: site
-#      rm: true
-#    when:
-#      branch: master
-#
-#  - name: "restart nginx"
-#    image: appleboy/drone-ssh
-#    settings:
-#      host: dockerhost
-#      user: snoby
-#      port: 22
-#      key:
-#        from_secret: SSH_KEY
-#      script:
-#        - /home/snoby/docker_start_up_commands/docs/run_docs.sh
-#    when:
-#      branch: master
-#
----
-kind: secret
-name: color
-get:
-  path: secret/data/CI/test
-  name: color
+  - name: deploy_site
+    image: appleboy/drone-scp
+    settings:
+      host: dockerhost
+      user: snoby
+      port: 22
+      key:
+        from_secret: SSH_KEY
+      target: /mnt/data/docs/
+      source: site
+      rm: true
+    when:
+      branch: master
 
----
-kind: secret
-name: number
-get:
-  path: secret/data/CI/test
-  name: number
+  - name: "restart nginx"
+    image: appleboy/drone-ssh
+    settings:
+      host: dockerhost
+      user: snoby
+      port: 22
+      key:
+        from_secret: SSH_KEY
+      script:
+        - /home/snoby/docker_start_up_commands/docs/run_docs.sh
+    when:
+      branch: master
+
