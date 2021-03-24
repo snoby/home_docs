@@ -12,7 +12,7 @@ platform:
 
 steps:
   - name: build_site
-    image: iotapi322/docs:latest
+    image: iotapi322/docs-insider:latest
     environment:
       SECRET_1:
         from_secret: color
@@ -47,4 +47,3 @@ steps:
         - /home/snoby/docker_start_up_commands/docs/run_docs.sh
     when:
       branch: master
-

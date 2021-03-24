@@ -2,44 +2,79 @@ site_name: Snoby Home Document Service
 site_description: "Information about the home lab and home network"
 site_author: "Matt Snoby"
 site_url: "http://docs.mattsnoby.com"
+nav:
+  - Home: index.md
+  - Lab:
+      - Drone: drone.md
+      - Molecule: molecule.md
+      - Mellanox: mellanox.md
+      - R720: r720.md
+  - House Information:
+      - Upstairs: rooms/upstairs.md
+      - Downstairs: rooms/downstairs.md
+      - Basement: rooms/basement.md
+      - Electrical: rooms/electrical.md
 theme:
   name: material
   language: "en"
   palette:
-    primary: "indigo"
-    accent: "indigo"
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
   font:
-    text: "Roboto"
-    code: "Roboto Mono"
+    text: "Ubuntu"
+    code: "Ubuntu Mono"
   icon:
     repo: fontawesome/brands/github
   features:
     - navigation.instant
+    - navigation.tracking
     - navigation.expand
     - navigation.sections
+    - navigation.indexes
+    - navigation.top
     - toc.integration
+    - search.suggest
 
 markdown_extensions:
   - toc:
       permalink: true
   - attr_list
   - admonition
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
   - pymdownx.details
   - pymdownx.tabbed
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
-          format: !!python/name:mermaid2.fence_mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.snippets
+  - pymdownx.caret
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.progressbar
+  - pymdownx.critic
 
 plugins:
-  - search
+  - search:
+      lang: en
   - img2fig
-  - mermaid2:
-      version: 8.6.4
-      arguments:
-        securityLevel: "loose"
 
 extra_javascript:
   - https://unpkg.com/mermaid@8.6.4/dist/mermaid.min.js
@@ -47,3 +82,5 @@ extra_javascript:
 repo_url: https://github.com/snoby/home_docs/
 repo_name: github.com/snoby/home_docs
 edit_uri: blob/master/home_docs/
+extra:
+  generator: false
