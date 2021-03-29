@@ -23,6 +23,7 @@
 | 18       | Link to subpanel ( 100A)|
 | 19       | Part of 18, 20|
 | 20       ||
+
 ## Laundry Room Small Panel
 | circuit  | Description                                                         |
 |--------- |---------------------------------------------------------------------|
