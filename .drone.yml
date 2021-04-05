@@ -42,8 +42,15 @@ steps:
       user: snoby
       port: 22
       key:
-        from_secret: SSH_KEY
+        from_secret: ssh_private_key
       script:
         - /home/snoby/docker_start_up_commands/docs/run_docs.sh
     when:
       branch: master
+
+---
+kind: secret
+name: ssh_private_key
+get:
+  path: secret/data/CI/docs
+  name: DEPLOYTOKEN
