@@ -27,7 +27,7 @@
 ## Laundry Room Small Panel
 | circuit  | Description                                                         |
 |--------- |---------------------------------------------------------------------|
-| 1        |GreatRoom Plugs on Powder room wall                                  |
+| 1        |Great Room Plugs on Powder room wall                                  |
 | 2        |Sub panel in Basement  (Part 1)                                               |
 | 3        | xxxxxxxxx                                                           |
 | 4        |Sub panel in basement  (Part 2)                                                                   |

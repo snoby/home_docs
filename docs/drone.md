@@ -3,7 +3,7 @@
 The Drone server  is running in a docker container only setup with http, however the reverse proxy is doing it's https termination.
 
 ## Gotcha's with reverse proxy SSL termination.
-The reverse proxy SSL termination presents a couple of little issues in the configuation.  Normally the http port is set to 301 return a redirect.  Which the agent can't handle.
+The reverse proxy SSL termination presents a couple of little issues in the configuration.  Normally the http port is set to 301 return a redirect.  Which the agent can't handle.
 
 Therefore when setting up behind a reverse proxy that will be terminating the SSL you have to do the following
 

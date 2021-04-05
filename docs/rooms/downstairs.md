@@ -6,7 +6,7 @@
 
 ## Entry wat
 
-## Dining Rooim
+## Dining Room
 
 ## Office
 

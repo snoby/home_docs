@@ -17,7 +17,7 @@ Paint is Sherwin Williams
 ## Alysss's Room
 
 ### Electrical
- * plugs ande lights - left subpanel circuit **10**
+ * plugs and lights - left subpanel circuit **10**
 
 
 ## Jack's Room
@@ -37,7 +37,7 @@ Sherwin Williams
 
 
 ### Electrical
- * plugs ande lights - left subpanel circuit **10**
+ * plugs and lights - left subpanel circuit **10**
 
 
 
