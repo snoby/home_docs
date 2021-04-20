@@ -33,3 +33,16 @@ sudo mlxconfig -d /dev/mst/mt4099_pciconf0 set LINK_TYPE_P1=2 LINK_TYPE_P2=2
 ```
 
 ## Performance tuning suggtestions for Mellanox
+
+
+## SR-IOV
+To enable PCI pass through  and  SR_IOV
+
+For intel
+```
+sudo vim /etc/default/grub
+GRUB_CMDLINE_LINUX_DEFAULT="intel_iommu=on"
+sudo update-grub
+```
+
+

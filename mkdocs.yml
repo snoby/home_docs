@@ -9,6 +9,7 @@ nav:
       - Molecule: molecule.md
       - Mellanox: mellanox.md
       - R720: r720.md
+      - Bonding: bonding.md
   - House Information:
       - Upstairs: rooms/upstairs.md
       - Downstairs: rooms/downstairs.md
