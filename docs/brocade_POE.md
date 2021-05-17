@@ -1,5 +1,8 @@
 
 
+## POE Ports
+Currently ports 36 - 47, have POE enabled.
+
 ## Port numbering
 
 Understanding Brocade Logical Port Numbers
@@ -123,3 +126,27 @@ PORT-VLAN 1, Name DEFAULT-VLAN, Priority level0, Spanning tree Off
 
 
 ```
+
+Setup vlan for cable modem
+
+```
+# Create vlan
+vlan 10 name "CM_WAN"
+#Set modem ports to untag
+untag eth 1/1/47 to 1/1/48
+#tag Ports to 10Gbe
+tag eth 1/2/3
+
+interface ethernet 1/2/3
+dual-mode
+write memory
+```
+Setup the LAG group
+```
+lag LAG01 dynamic id 1
+ports eth 1/1/47 to 1/1/48
+prim 1/1/47
+deploy
+write memory
+```
+

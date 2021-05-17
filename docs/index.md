@@ -1,5 +1,4 @@
 
-
 ## User Services
 
 - [Transmission](http://dockerhost:9091){target=\_blank}
@@ -16,6 +15,7 @@
 - [prometheus](http://prom.mattsnoby.com){target=\_blank}
 - [grafana](http://grafana.mattsnoby.com){target=\_blank}
 - [drone](https://drone.mattsnoby.com:){target=\_blank}
+- [kibana](http://kibana.mattsnoby.com:){target=\_blank}
 
 
 ## Hardware
@@ -25,12 +25,14 @@
 - [Zyxel Swich](https://10.0.0.2){target=\_blank}
 - [Cisco Fiber Swich](https://10.0.0.3){target=\_blank}
 - [Brocade ICX 6450 Switch](http://10.0.0.4){target=\_blank}
-- [Brocade ICX 6450 Switch POE](http://10.0.0.7){target=\_blank}
+- [Brocade ICX 6450 Switch POE](http://10.0.0.253){target=\_blank}
 - [AC1200 Access Point](https://10.0.0.5){target=\_blank}
 - [Mikrotek Switch](https://10.0.0.6){target=\_blank}
 - [Garage Access Point](https://10.0.0.11){target=\_blank}
 - [Nighthawk Access point ](https://10.0.0.12){target=\_blank}
 - [Comfast Garage Access Point ](http://10.0.0.13){target=\_blank}
+- [Aruba 1930  ](http://aruba1930){target=\_blank}
+
 
 ### Servers iDrac
 
@@ -47,12 +49,13 @@
 | ICX5450-48               | 10.0.0.4     | 48p switch with sfp+        |
 | AC1200 Upstairs          | 10.0.0.5     | playroom access point       |
 | Mikrotek                 | 10.0.0.6     | 10Ge Mikrotek switch        |
-| ICX6450-48 POE           | 10.0.0.7     | 48p switch with sfp+ POE    |
+| ICX6450-48 POE           | 10.0.0.253   | out of service              |
 |                          |              |                             |
 | r710 iDrac               | 10.0.0.9     | idrac for r710              |
 | Linksys EA6500           | 10.0.0.11    | Garage Access Point         |
 | Netgear nighthawk        | 10.0.0.12    | Masterbed room access point |
 | Comcast Netgear nighthawk| 10.0.0.13    | in storage                  |
+| Aruba 1930               | dhcp         | main rack                   |
 |                          |              |                             |
 | r510 iDrac               | 10.0.0.20    | idrac for r510              |
 |                          |              |                             |
