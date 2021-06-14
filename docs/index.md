@@ -31,13 +31,14 @@
 - [Garage Access Point](https://10.0.0.11){target=\_blank}
 - [Nighthawk Access point ](https://10.0.0.12){target=\_blank}
 - [Comfast Garage Access Point ](http://10.0.0.13){target=\_blank}
-- [Aruba 1930  ](http://aruba1930){target=\_blank}
+- [chassis chia file server  ](http://10.0.0.22){target=\_blank}
 
 
 ### Servers iDrac
 
 - [r710 idrac](https://10.0.0.9){target=\_blank}
 - [r510 idrac](https://10.0.0.20){target=\_blank}
+- [r510 idrac chassis](https://10.0.0.21){target=\_blank}
 
 ## Static IP Addresses
 
@@ -49,13 +50,13 @@
 | ICX5450-48               | 10.0.0.4     | 48p switch with sfp+        |
 | AC1200 Upstairs          | 10.0.0.5     | playroom access point       |
 | Mikrotek                 | 10.0.0.6     | 10Ge Mikrotek switch        |
-| ICX6450-48 POE           | 10.0.0.253   | out of service              |
+| ICX6450-48 POE           | 10.0.0.17    |                             |
 |                          |              |                             |
 | r710 iDrac               | 10.0.0.9     | idrac for r710              |
 | Linksys EA6500           | 10.0.0.11    | Garage Access Point         |
 | Netgear nighthawk        | 10.0.0.12    | Masterbed room access point |
 | Comcast Netgear nighthawk| 10.0.0.13    | in storage                  |
-| Aruba 1930               | dhcp         | main rack                   |
+| ICX6450-24 POE           | 10.0.0.16    | The main 24 port switch     |
 |                          |              |                             |
-| r510 iDrac               | 10.0.0.20    | idrac for r510              |
-|                          |              |                             |
+| r510 iDrac  storage      | 10.0.0.20    | idrac for r510              |
+| r510 iDrac  chassis      | 10.0.0.21    | idrac-chia is hostname      |

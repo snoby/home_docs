@@ -47,10 +47,10 @@ steps:
         - /home/snoby/docker_start_up_commands/docs/run_docs.sh
     when:
       branch: master
-
----
-kind: secret
-name: ssh_private_key
-get:
-  path: secret/data/CI/docs
-  name: DEPLOYTOKEN
+# don't want to use vault for now
+#---
+#kind: secret
+#name: ssh_private_key
+#get:
+#  path: secret/data/CI/docs
+#  name: DEPLOYTOKEN
