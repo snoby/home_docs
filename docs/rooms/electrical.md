@@ -27,9 +27,11 @@
 ## Laundry Room Small Panel
 | circuit  | Description                                                         |
 |--------- |---------------------------------------------------------------------|
-| 1        |Great Room Plugs on Powder room wall                                  |
+| 1a       |Great Room Plugs on Powder room wall                                  |
+| 1b       | lights in corner of basement blue room                             |
 | 2        |Sub panel in Basement  (Part 1)                                               |
-| 3        | xxxxxxxxx                                                           |
+| 3a       | Blue room lights and inner wall plugs                               |
+| 3b       |
 | 4        |Sub panel in basement  (Part 2)                                                                   |
 | 5        | Basement back corner walls and pull string lights.                  |
 | 6        | Basement workshop                                                                    |

@@ -31,7 +31,12 @@ Sherwin Williams
 
 
 ## Kid's Bathroom
+Same as hallway
 
+Paint is Sherwin Williams
+[Versatile-gray]( https://www.sherwin-williams.com/homeowners/color/find-and-explore-colors/paint-colors-by-family/SW6072-versatile-gray)
+
+![Versatile Gray](../files/versatile_gray.png)
 
 ## Play Room
 
