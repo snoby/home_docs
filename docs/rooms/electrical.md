@@ -9,15 +9,15 @@
 | 4        |Oven                                                                 |
 | 5        |Upstairs A/C|
 | 6A       | Master Attic light, Master Bed Fan, Upstairs Hallway backlight, Upstairs back bedrooms all, Right upstairs Jack and Jill light and fan                                                                    |
-| 6B        | upstairs Jack and Jill light and fan                                                                    |
+| 6B       | upstairs Jack and Jill light and fan                                                                    |
 | 7        |Upstairs A/C|
-| 8A        |Washing machine plug|
-| 8B        ||
+| 8A       |Washing machine plug|
+| 8B       | plugs in Dining room.|
 | 9        | Dryer|
 | 10       |Frig, den wall                                  |
 | 11       |Dryer|
-| 12       |Basement center lights and steps |
-| 13       ||
+| 12       |Basement center lights and steps, back wall under heater plug. Plug in corner of basement by windows.|
+| 13       |a plug unknown , 13 b plug unknown|
 | 14       |Cook Top |
 | 15       ||
 | 16       |Cook Top|
